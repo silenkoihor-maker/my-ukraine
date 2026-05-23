@@ -1,0 +1,74 @@
+/* Основні налаштування сторінки */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Шапка сайту */
+header {
+    background: linear-gradient(135deg, #0057b7 50%, #ffd700 50%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 10px 0 0 0;
+    font-size: 1.2rem;
+}
+
+/* Головний контейнер */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* Фотографія */
+.site-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+/* Текстовий блок */
+.content {
+    padding: 30px;
+}
+
+.content h2 {
+    color: #0057b7;
+    margin-top: 0;
+}
+
+.content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Підвал сайту */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
