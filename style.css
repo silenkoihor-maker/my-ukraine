@@ -1,74 +1,107 @@
-/* Основні налаштування сторінки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    color: #333333;
     background-color: #f9f9f9;
-    color: #333;
 }
 
-/* Шапка сайту */
-header {
-    background: linear-gradient(135deg, #0057b7 50%, #ffd700 50%);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    margin: 10px 0 0 0;
-    font-size: 1.2rem;
-}
-
-/* Головний контейнер */
-.container {
-    max-width: 800px;
-    margin: 30px auto;
+/* Головний контейнер, який задає ширину і для фото, і для тексту */
+.content-container {
+    max-width: 800px; /* Фото і текст не будуть ширшими за 800px */
+    margin: 40px auto; /* Центруємо всю картку на екрані та додаємо відступ зверху */
     padding: 0 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
 }
 
-/* Фотографія */
-.site-image {
+/* Стилі для фотографії */
+.image-container {
     width: 100%;
-    height: auto;
+    margin-bottom: 30px; /* Відступ між фото та заголовком */
+    border-radius: 12px; /* Красиві закруглені кути для фото */
+    overflow: hidden; /* Щоб картинка не вилазила за закруглені кути */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Легка тінь для об'єму */
+}
+
+.top-photo {
+    width: 100%;
+    height: auto; /* Фото більше не обрізається, а зберігає свої пропорції! */
     display: block;
-    max-height: 450px;
-    object-fit: cover;
+}
+
+/* Стилі заголовка */
+.main-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    color: #0057b7;
+    margin-bottom: 5px;
+}
+
+.main-header .subtitle {
+    font-size: 1.3rem;
+    color: #666666;
+    font-weight: 300;
 }
 
 /* Текстовий блок */
-.content {
-    padding: 30px;
+.about-section h2 {
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 20px;
 }
 
-.content h2 {
-    color: #0057b7;
-    margin-top: 0;
+.about-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ffd700;
+    margin-top: 8px;
+    border-radius: 2px;
 }
 
-.content p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
+.about-section p {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
     text-align: justify;
 }
 
-/* Підвал сайту */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: #ccc;
+    background-color: #222222;
+    color: #ffffff;
     font-size: 0.9rem;
-    margin-top: 40px;
+    margin-top: 60px;
+}
+
+/* =======================================================
+   МЕДІА-ЗАПИТИ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ
+   ======================================================= */
+
+@media (max-width: 600px) {
+    .content-container {
+        margin: 20px auto; /* Менший відступ на телефонах */
+    }
+    .main-header h1 {
+        font-size: 2.2rem;
+    }
+    .main-header .subtitle {
+        font-size: 1.1rem;
+    }
+    .about-section h2 {
+        font-size: 1.6rem;
+    }
+    .about-section p {
+        font-size: 1rem;
+        text-align: left;
+    }
 }
